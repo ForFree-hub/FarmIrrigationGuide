@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Irrigation Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#4CAF50">
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="lang-toggle">
+        <label id="langLabel">Bhasha (Language)</label>
+        <button id="langBtn">हिंदी / English</button>
+    </div>
+
+    <div class="container">
+        <h1 id="title">Farm Irrigation Guide</h1>
+        <form id="form">
+            <label><i class="fas fa-seedling icon"></i><span id="cropLabel">Select Crop:</span></label>
+            <select id="crop" required></select>
+
+            <label><i class="fas fa-map-marker-alt icon"></i><span id="locationLabel">Village/District:</span></label>
+            <input type="text" id="location" placeholder="e.g., Delhi" required>
+            <button type="button" id="gpsBtn"><i class="fas fa-crosshairs icon"></i>Use GPS</button>
+
+            <label><i class="fas fa-water icon"></i><span id="soilLabel">Soil Type:</span></label>
+            <select id="soil" required></select>
+
+            <button type="submit"><i class="fas fa-search icon"></i><span id="submitBtn">Get Guidance</span></button>
+        </form>
+
+        <div id="guidance" class="guidance" style="display:none;">
+            <h2 id="guidanceTitle">Irrigation Guidance</h2>
+            <p id="guidanceText"></p>
+        </div>
+
+        <div class="tips">
+            <h2 id="tipsTitle">Extra Tips</h2>
+            <div class="tip" id="waterTip"></div>
+            <div class="tip" id="fertTip"></div>
+            <div class="tip" id="pestTip"></div>
+        </div>
+
+        <div class="share">
+            <p><a id="whatsappLink" href="#" target="_blank">Share via WhatsApp</a></p>
+            <p><a id="emailLink" href="#" target="_blank">Share via Email</a></p>
+        </div>
+    </div>
+</body>
+</html>
